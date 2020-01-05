@@ -8,7 +8,7 @@ ARG build_packages="gcc g++ make libffi-dev openssl-dev python3-dev"
 
 RUN apk --no-cache upgrade \
 	&& apk add --no-cache $build_packages \
-	&& pip3 install $python_packages \
+	&& pip3 install --no-cache-dir $python_packages \
 	&& apk --no-cache del $build_packages \
 	&& rm -rf /tmp/*
 
