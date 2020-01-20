@@ -30,7 +30,7 @@ class default:
 		for List in KeepLists:
 			# Find the list we want
 			if List.title == user_data.listname:
-				List.add(user_data.listitem, False)
+				List.add(user_data.listitem, False, gkeepapi.node.NewListItemPlacementValue.Top)
 				keep.sync()
 				return "Adding " + user_data.listitem + " to list " + user_data.listname
 
